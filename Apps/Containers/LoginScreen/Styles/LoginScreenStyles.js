@@ -4,9 +4,10 @@ import { Metrics, Images, Colors } from "../../../Themes";
 export default StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: "#F2CBD0",
   },
   head: {
-    backgroundColor: "white",
+    backgroundColor: Colors.white,
   },
   content: {
     color: "#6A515E",
@@ -14,10 +15,12 @@ export default StyleSheet.create({
     marginTop: 30,
     marginHorizontal: 40,
     lineHeight: 42,
-    marginBottom: 62,
   },
-  body: {
-    flex: 1,
-    backgroundColor: "#F2CBD0",
+  content1: {
+    color: "#6A515E",
+    fontSize: 18,
+    marginHorizontal: 40,
+    lineHeight: 42,
+    marginBottom: 62,
   },
 });

@@ -9,6 +9,7 @@ import { createMaterialTopTabNavigator } from "@react-navigation/material-top-ta
 
 // Screen
 import SplashScreen from "./Apps/Containers/SplashScreen/SplashScreen";
+import LoginScreen from "./Apps/Containers/LoginScreen/LoginScreen";
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -23,7 +24,7 @@ function HomeStacks() {
       initialRouteName="SplashScreen"
     >
       <HomeStack.Screen name="SplashScreen" component={SplashScreen} />
-      {/* <HomeStack.Screen name="AddStudent" component={AddStudent} /> */}
+      <HomeStack.Screen name="LoginScreen" component={LoginScreen} />
     </HomeStack.Navigator>
   );
 }
