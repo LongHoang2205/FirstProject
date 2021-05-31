@@ -7,8 +7,8 @@ export default StyleSheet.create({
     backgroundColor: Colors.white,
     height: 66,
     borderRadius: 30,
-    marginHorizontal: 24,
-    marginTop: 30,
+    marginHorizontal: 25,
+    marginTop: 16,
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "center",
@@ -21,13 +21,14 @@ export default StyleSheet.create({
   viewimg: {
     width: 55,
     height: 55,
-    borderRadius: 40,
+    borderRadius: 28,
     backgroundColor: "green",
     justifyContent: "center",
     alignItems: "center",
+    marginLeft: -10,
   },
   img: {
-    width: 30,
-    height: 30,
+    width: 25,
+    height: 25,
   },
 });

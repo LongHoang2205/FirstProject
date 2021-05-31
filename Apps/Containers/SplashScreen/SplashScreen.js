@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, SafeAreaView, Image } from "react-native";
+import { View, Text, SafeAreaView, Image, ScrollView } from "react-native";
 import styles from "./Styles/SplashScreenStyles";
 import { Images } from "../../Themes";
 //component
@@ -10,17 +10,20 @@ export default function SplashScreen({ navigation }) {
     navigation.navigate("LoginScreen");
   };
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <SafeAreaView style={{ backgroundColor: "white" }} />
       <View style={styles.head}>
-        <Text style={styles.content}>The best photos from good people</Text>
+        <View style={styles.viewtext}>
+          <Text style={styles.content}>The best photos from good people</Text>
+        </View>
       </View>
+
       <View style={styles.body}>
         <Image source={Images.img1}></Image>
       </View>
-      <View style={{ position: "absolute", width: 370, bottom: -10 }}>
+      <View style={styles.btn}>
         <FBButton text="Get Started" onPressBtn={onPressLogin} />
       </View>
-    </View>
+    </ScrollView>
   );
 }

@@ -23,4 +23,24 @@ export default StyleSheet.create({
     height: 20,
     tintColor: "white",
   },
+  body: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#2193b0",
+  },
+  button: {
+    width: 150,
+    height: 60,
+    justifyContent: "center",
+    borderRadius: 10,
+    backgroundColor: "#2c3e50",
+  },
+  buttonText: {
+    fontSize: 18,
+    textAlign: "center",
+    margin: 10,
+    fontWeight: "bold",
+    color: "#ffffff",
+  },
 });

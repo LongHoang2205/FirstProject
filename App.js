@@ -4,12 +4,13 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 
 //Redux
-// import { Provider } from "react-redux";
-// import store from "./Apps/Redux/Store/store";
+import { Provider } from "react-redux";
+import store from "./Apps/Redux/Store/store";
 
 // Screen
 import SplashScreen from "./Apps/Containers/SplashScreen/SplashScreen";
 import LoginScreen from "./Apps/Containers/LoginScreen/LoginScreen";
+import HomeScreen from "./Apps/Containers/HomeScreen/HomeScreen";
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -25,6 +26,7 @@ function HomeStacks() {
     >
       <HomeStack.Screen name="SplashScreen" component={SplashScreen} />
       <HomeStack.Screen name="LoginScreen" component={LoginScreen} />
+      <HomeStack.Screen name="HomeScreen" component={HomeScreen} />
     </HomeStack.Navigator>
   );
 }
@@ -32,13 +34,13 @@ function HomeStacks() {
 const Stack = createStackNavigator();
 function App() {
   return (
-    // <Provider store={store}>
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName={"SplashScreen"} headerMode={"none"}>
-        <Stack.Screen name={"HomeStack"} component={HomeStacks} />
-      </Stack.Navigator>
-    </NavigationContainer>
-    // </Provider>
+    <Provider store={store}>
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName={"SplashScreen"} headerMode={"none"}>
+          <Stack.Screen name={"HomeStack"} component={HomeStacks} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </Provider>
   );
 }
 
