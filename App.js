@@ -11,6 +11,8 @@ import store from "./Apps/Redux/Store/store";
 import SplashScreen from "./Apps/Containers/SplashScreen/SplashScreen";
 import LoginScreen from "./Apps/Containers/LoginScreen/LoginScreen";
 import HomeScreen from "./Apps/Containers/HomeScreen/HomeScreen";
+import ConversationScreen from "./Apps/Containers/ConversationScreen/ConversationScreen";
+import MessageScreen from "./Apps/Containers/MessageScreen/MessageScreen";
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -27,6 +29,11 @@ function HomeStacks() {
       <HomeStack.Screen name="SplashScreen" component={SplashScreen} />
       <HomeStack.Screen name="LoginScreen" component={LoginScreen} />
       <HomeStack.Screen name="HomeScreen" component={HomeScreen} />
+      <HomeStack.Screen
+        name="ConversationScreen"
+        component={ConversationScreen}
+      />
+      <HomeStack.Screen name="MessageScreen" component={MessageScreen} />
     </HomeStack.Navigator>
   );
 }

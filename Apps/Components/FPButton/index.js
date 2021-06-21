@@ -1,2 +1,3 @@
 import FBButton from "./FBButton";
-export { FBButton };
+import FPIcons from "./FPIcons";
+export { FBButton, FPIcons };

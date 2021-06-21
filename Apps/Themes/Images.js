@@ -8,6 +8,9 @@ const images = {
   search: require("../../Apps/Images/Icons/search.png"),
   twodots: require("../../Apps/Images/Icons/two-dots.png"),
   jisoo: require("../../Apps/Images/Images/jisoo.jpeg"),
+  back: require("../../Apps/Images/Icons/arrow.png"),
+  pen: require("../../Apps/Images/Icons/pen.png"),
+  direct: require("../../Apps/Images/Icons/direct.png"),
 };
 
 export default images;
