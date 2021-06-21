@@ -4,14 +4,14 @@ import { Images } from "../../Themes";
 
 //style
 import styles from "./Styles/FPAccountListStyle";
-export default function FPAccountList(item, index, onPressEdit, onPressDelete) {
+export default function FPAccountList(item, index, onPressBtn) {
   return (
     <View style={styles.container}>
       <View style={styles.body}>
         <Image source={Images.zenitsu} style={styles.img} />
       </View>
       <View style={styles.footer}>
-        <TouchableOpacity style={styles.btnAccount}>
+        <TouchableOpacity style={styles.btnAccount} onPress={onPressBtn}>
           <Image source={Images.jisoo} style={styles.avatar}></Image>
         </TouchableOpacity>
 

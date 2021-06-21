@@ -1,38 +1,38 @@
-import { ADD_ACCOUNT } from "../../Constants/ReduxType";
+import { ADD_MESSAGE } from "../../Constants/ReduxType";
 
 const initialState = {
-  account: [
+  conversation: [
     {
       id: 1,
       name: "Jisoo",
-      activity: "active",
+      message: "How your life is going?",
     },
     {
       id: 2,
       name: "Songoku",
-      activity: "2 hour ago",
+      message: "Wow,that's awesome",
     },
     {
       id: 3,
       name: "Hoang Vu Long",
-      activity: "15 minute ago",
+      message: "Bye bye",
     },
     {
       id: 4,
       name: "GD",
-      activity: "1 hour ago",
+      message: "It's sunny day",
     },
   ],
 };
-export default function (login = initialState, action) {
+export default function (message = initialState, action) {
   switch (action.type) {
-    case ADD_ACCOUNT:
+    case ADD_MESSAGE:
       // trước khi gọi request để lấy data mới thì
       // clear data cũ
       return {
-        login,
+        message,
       };
     default:
-      return login;
+      return message;
   }
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   View,
   Text,
@@ -18,6 +18,9 @@ export default function SplashScreen({ navigation }) {
   const dispatch = useDispatch();
   const accountState = useSelector((state) => state.account);
   const accountData = accountState.account;
+  const onPressBtn = () => {
+    navigation.navigate("ConversationScreen");
+  };
   return (
     <ScrollView style={styles.container}>
       <SafeAreaView style={{ backgroundColor: "white" }} />
@@ -33,7 +36,9 @@ export default function SplashScreen({ navigation }) {
       <View>
         <FlatList
           data={accountData}
-          renderItem={({ item, index }) => FPAccountList(item, index)}
+          renderItem={({ item, index }) =>
+            FPAccountList(item, index, onPressBtn)
+          }
           keyExtractor={(item, index) => item.id + index}
         />
       </View>

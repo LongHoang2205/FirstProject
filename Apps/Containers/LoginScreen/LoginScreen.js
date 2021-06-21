@@ -36,14 +36,14 @@ export default function SplashScreen({ navigation }) {
       <View style={styles.body}>
         <FPTextInput
           placeholder="username"
-          imgSource={Images.account}
+          imgSourceInput={Images.account}
           onChangeText={(text) => onChangeTextName(text)}
           value={nameInput}
         />
 
         <FPTextInput
           placeholder="password"
-          imgSource={Images.password}
+          imgSourceInput={Images.password}
           onChangeText={(text) => onChangeTextPassword(text)}
           value={passwordInput}
         />
