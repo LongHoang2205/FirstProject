@@ -9,11 +9,9 @@ export const loginRequestAction = (payload) => ({
   payload,
 });
 
-export const loginSuccessAction = (username, password, payload) => ({
+export const loginSuccessAction = (payload) => ({
   type: LOGIN_SUCCESS,
   payload,
-  username: "LongHoang",
-  password: "123123",
 });
 
 export const loginFailureAction = (payload) => ({

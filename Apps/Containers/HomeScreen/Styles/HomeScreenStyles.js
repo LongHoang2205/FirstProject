@@ -1,5 +1,5 @@
-import { StyleSheet, Platform, StatusBar } from "react-native";
-import { Metrics, Images, Colors } from "../../../Themes";
+import { StyleSheet } from "react-native";
+import { Metrics, Colors } from "../../../Themes";
 
 export default StyleSheet.create({
   container: {
@@ -15,7 +15,7 @@ export default StyleSheet.create({
     alignItems: "center",
     marginBottom: 20,
   },
-  viewtext: {
+  viewText: {
     marginTop: 30,
     marginLeft: Metrics.halfQuintupleBaseMargin + 15,
   },
@@ -24,7 +24,6 @@ export default StyleSheet.create({
     fontSize: Metrics.body2,
     lineHeight: Metrics.quadrupleBaseMargin + 2,
   },
-
   content1: {
     color: Colors.text,
     fontSize: Metrics.h4,

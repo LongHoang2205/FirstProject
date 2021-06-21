@@ -8,21 +8,27 @@ import {
   TouchableOpacity,
   FlatList,
 } from "react-native";
+
+// styles
 import styles from "./Styles/HomeScreenStyles";
+
+// components
+import { FPAccountList } from "../../Components";
+
+// themes
 import { Images } from "../../Themes";
-//component
-import { FBButton, FPAccountList } from "../../Components";
+
+// redux
 import { useDispatch, useSelector } from "react-redux";
 
-export default function SplashScreen({ navigation }) {
+export default function SplashScreen() {
   const dispatch = useDispatch();
-  const accountState = useSelector((state) => state.account);
-  const accountData = accountState.account;
+
   return (
     <ScrollView style={styles.container}>
       <SafeAreaView style={{ backgroundColor: "white" }} />
       <View style={styles.head}>
-        <View style={styles.viewtext}>
+        <View style={styles.viewText}>
           <Text style={styles.content1}>Hello,</Text>
           <Text style={styles.content}>Long</Text>
         </View>
@@ -30,13 +36,7 @@ export default function SplashScreen({ navigation }) {
           <Image source={Images.search} style={styles.search}></Image>
         </TouchableOpacity>
       </View>
-      <View>
-        <FlatList
-          data={accountData}
-          renderItem={({ item, index }) => FPAccountList(item, index)}
-          keyExtractor={(item, index) => item.id + index}
-        />
-      </View>
+      <View></View>
     </ScrollView>
   );
 }

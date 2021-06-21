@@ -1,19 +1,41 @@
+// types
 import {
   LOGIN_REQUEST,
   LOGIN_SUCCESS,
   LOGIN_FAILURE,
 } from "../../Constants/ReduxType";
 
-export default function (login = [], action) {
+const initialState = {
+  userData: null,
+
+  isLoadingLogin: false,
+  errorLogin: null,
+};
+
+export default function (state = initialState, action) {
   switch (action.type) {
     case LOGIN_REQUEST:
-      console.log("login page", action.username);
-      // trước khi gọi request để lấy data mới thì
-      // clear data cũ
       return {
-        login,
+        ...state,
+        isLoadingLogin: true,
+        errorLogin: null,
+      };
+    case LOGIN_SUCCESS:
+      return {
+        ...state,
+        userData: action.data,
+        isLoadingLogin: false,
+        errorLogin: null,
+      };
+    case LOGIN_FAILURE:
+      return {
+        ...state,
+        isLoadingLogin: false,
+        errorLogin: action.error,
       };
     default:
-      return login;
+      return {
+        ...state,
+      };
   }
 }

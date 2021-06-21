@@ -11,7 +11,7 @@ export default StyleSheet.create({
     width: 375,
     height: 236,
   },
-  viewtext: {
+  viewText: {
     marginTop: 149,
     marginRight: Metrics.quintupleBaseMargin + 5,
     marginLeft: Metrics.halfQuintupleBaseMargin,
